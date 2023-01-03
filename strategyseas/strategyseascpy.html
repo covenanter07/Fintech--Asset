@@ -1,0 +1,1810 @@
+<!-- 策略頁面  already change version -->
+<!-- 下拉式選單 select button  exprience version  -->
+<!DOCTYPE >
+<html>
+  <head>
+    <title>股掌之間</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" , href="crystle.css" />
+  </head>
+
+  <body style="background-color: #ededed">
+    <div class="title"><h2>股掌之間</h2></div>
+    <!-- < class="body"> < class="mode"> -->
+    <ul>
+      <li id="btn1">個股回測</li>
+      <li id="btn2">設定策略</li>
+    </ul>
+    <form>
+      <div class="selector">
+        <b style="margin-top: 5px">時間區間</b>
+        <input type="date" id="startdt" name="bday" />
+        <span style="margin-top: 10px">=></span>
+        <input type="date" id="endtdt" name="bday" />
+      </div>
+    </form>
+    <hr />
+
+    <!-- id 要記得改 -->
+
+    <div style="float: left; text-align: left">買入訊號<br /></div>
+
+    <select name="name" id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select name="named" id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select name="namedet" id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+    <br />
+    <select name="namedeg" id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+    <br />
+
+    <hr />
+
+    <div style="float: left; text-align: left">買入訊號<br /></div>
+
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+    <br />
+
+    <hr />
+
+    <div style="float: left; text-align: left">買入訊號<br /></div>
+
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+    <br />
+
+    <hr />
+
+    <div style="float: left; text-align: left">買入訊號<br /></div>
+
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+    <br />
+
+    <hr />
+
+    <div style="float: left; text-align: left">買入訊號<br /></div>
+
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+    <br />
+
+    <hr />
+
+    <div style="float: left; text-align: left">買入訊號<br /></div>
+
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+    <br />
+
+    <hr />
+
+    <div style="float: left; text-align: left">買入訊號<br /></div>
+
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+    <br />
+
+    <hr />
+
+    <div style="float: left; text-align: left">買入訊號<br /></div>
+
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+    <br />
+
+    <hr />
+
+    <div style="float: left; text-align: left">買入訊號<br /></div>
+
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+    <br />
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+    <br />
+
+    <hr />
+
+    <div style="float: left; text-align: left">買入訊號<br /></div>
+
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+    <br />
+
+    <hr />
+
+    <script>
+      $("#choice").selectmenu();
+      $("#choice").on("selectmenuchange", function () {
+        var choice = $(this).val();
+        alert("---未選擇--- : " + choice);
+      });
+    </script>
+
+    <script>
+      function isInputNumber(evt) {
+        var char = string.fromCharCode(evt.which);
+
+        if (!/[0-9]/.test(ch)) {
+          evt.preventDefault();
+        }
+      }
+    </script>
+  </body>
+  <br />
+
+  <body>
+    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+    <div style="float: left; text-align: left">賣出訊號<br /></div>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr />
+    <div style="float: left; text-align: left">賣出訊號<br /></div>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr />
+
+    <div style="float: left; text-align: left">賣出訊號<br /></div>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr />
+
+    <div style="float: left; text-align: left">賣出訊號<br /></div>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr />
+
+    <div style="float: left; text-align: left">賣出訊號<br /></div>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr />
+
+    <div style="float: left; text-align: left">賣出訊號<br /></div>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+
+    <br />
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr />
+
+    <div style="float: left; text-align: left">賣出訊號<br /></div>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+
+    <br />
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr />
+
+    <div style="float: left; text-align: left">賣出訊號<br /></div>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr />
+
+    <div style="float: left; text-align: left">賣出訊號<br /></div>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+
+    <br />
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr />
+
+    <div style="float: left; text-align: left">賣出訊號<br /></div>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="基本面">基本面</option>
+      <option value="技術面">技術面</option>
+      <option value="籌碼面">籌碼面</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="PE 本益比">PE 本益比</option>
+      <option value="當月營收">當月營收</option>
+      <option value="殖利率(現金股利 + 股票股利)">
+        殖利率(現金股利 + 股票股利)
+      </option>
+      <option value="T3395營業利益">T3395營業利益</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3950歸屬母公司淨利">T3950歸屬母公司淨利</option>
+      <option value="T7211折舊">T7211折舊</option>
+      <option value="T0100流動資產">T0100流動資產</option>
+      <option value="T1100流動負債">T1100流動負債</option>
+      <option value="T7324取得不動產廠房及設備">
+        T7324取得不動產廠房及設備
+      </option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="T3970經常稅後淨利">T3970經常稅後淨利</option>
+      <option value="T7210營運現金流">T7210營運現金流</option>
+      <option value="R101_ROA稅後息前">R101_ROA稅後息前</option>
+      <option value="R11V_ROA綜合損益">R11V_ROA綜合損益</option>
+      <option value="R103_ROE稅後">R103_ROE稅後</option>
+      <option value="R11U_ROE綜合損益">R11U_ROE綜合損益</option>
+      <option value="R145_稅前息前折舊前淨利率">
+        R145_稅前息前折舊前淨利率
+      </option>
+      <option value="R105_營業毛利率">R105_營業毛利率</option>
+      <option value="R106_營業利益率">R106_營業利益率</option>
+      <option value="R107_稅前淨利率">R107_稅前淨利率</option>
+      <option value="R108_稅後淨利率">R108_稅後淨利率</option>
+      <option value="R112_業外收支營收率">R112_業外收支營收率</option>
+      <option value="R179_貝里比率">R179_貝里比率</option>
+      <option value="R203_研究發展費用率">R203_研究發展費用率</option>
+      <option value="R205_現金流量比率">R205_現金流量比率</option>
+      <option value="R207_稅率">R207_稅率</option>
+      <option value="R304_每股營業額">R304_每股營業額</option>
+      <option value="R504_總負債除總淨值">R504_總負債除總淨值</option>
+      <option value="R401_營收成長率">R401_營收成長率</option>
+      <option value="R402_營業毛利成長率">R402_營業毛利成長率</option>
+      <option value="R403_營業利益成長率">R403_營業利益成長率</option>
+      <option value="R404_稅前淨利成長率">R404_稅前淨利成長率</option>
+      <option value="R405_稅後淨利成長率">R405_稅後淨利成長率</option>
+      <option value="R406_經常利益成長率">R406_經常利益成長率</option>
+      <option value="R408_資產總額成長率">R408_資產總額成長率</option>
+      <option value="R409_淨值成長率">R409_淨值成長率</option>
+      <option value="R501_流動比率">R501_流動比率</option>
+      <option value="R503_利息支出率">R503_利息支出率</option>
+      <option value="R678_營運資金">R678_營運資金</option>
+      <option value="R607_總資產週轉次數">R607_總資產週轉次數</option>
+      <option value="R610_存貨週轉率">R610_存貨週轉率</option>
+      <option value="R612_固定資產週轉次數">R612_固定資產週轉次數</option>
+      <option value="R613_淨值週轉率次">R613_淨值週轉率次</option>
+      <option value="R69B_自由現金流量">R69B_自由現金流量</option>
+      <option value="開盤價">開盤價</option>
+      <option value="收盤價">收盤價</option>
+      <option value="最高價">最高價</option>
+      <option value="最低價">最低價</option>
+      <option value="成交量">成交量</option>
+      <option value="投信買賣超">投信買賣超</option>
+      <option value="外資買賣超">外資買賣超</option>
+      <option value="自營商買賣超">自營商買賣超</option>
+    </select>
+    <select id="choice">
+      <option value="">---未選擇---</option>
+      <option value="等於">等於</option>
+      <option value="大於">大於</option>
+      <option value="小於">小於</option>
+    </select>
+
+    <input type="text" onkepress="isInputNumber (event)" />
+
+    <br />
+
+    <select id="choice">
+      <option value="">AND</option>
+      <option value="">OR</option>
+    </select>
+
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <hr />
+
+    <button>開始回測</button>
+  </body>
+  <script src="./strategy.js"></script>
+  <script src="./jquery-3.2.1.min.js"></script>
+</html>
